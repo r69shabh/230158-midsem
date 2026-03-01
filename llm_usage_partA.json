@@ -1,0 +1,146 @@
+{
+  "student_metadata": {
+    "name": "Student Name",
+    "roll_number": "23NST045",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part A",
+    "submission_date": "2026-03-02"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Gemini",
+      "model": "Gemini 3.1 Pro",
+      "provider": "Google"
+    },
+    {
+      "tool_name": "Claude",
+      "model": "Claude 4.6 Reasoning",
+      "provider": "Anthropic"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-01",
+      "tool_name": "Gemini",
+      "model": "Gemini 3.1 Pro",
+      "purpose": "Paper Selection and Constraint Validation",
+      "prompt": "I need to select a classical ML paper from 2009-2012 published in a CORE A* venue. It must focus on SVMs, avoid heavy GPU compute, and be reproducible on a standard CPU. Can you suggest 'Nonconvex Online Support Vector Machines' (Ertekin, 2011) and verify if it meets these strict constraints?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Confirmed the paper was published in TPAMI (2011) and that its online nature bypasses O(N^3) memory constraints, making CPU reproduction highly feasible.",
+      "student_verification": "Cross-referenced the TPAMI 2011 publication date and the CORE ranking portal to ensure strict adherence to the Part A constraints.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-01",
+      "tool_name": "Gemini",
+      "model": "Gemini 3.1 Pro",
+      "purpose": "Understanding the core theoretical motivation",
+      "prompt": "The Ertekin 2011 paper replaces standard Hinge loss with Ramp loss. How exactly does Ramp loss mathematically cap the penalty for severe outliers compared to the unbounded nature of Hinge loss, and why does this improve robustness?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Provided a clear geometric intuition of how gradients evaluate to exactly zero when the margin falls below the 's' threshold, effectively rejecting extreme outliers.",
+      "student_verification": "Verified the mathematical definitions of H1(z) and Rs(z) directly from Section 3 of the research paper.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-02",
+      "tool_name": "Claude",
+      "model": "Claude 4.6 Reasoning",
+      "purpose": "Deciphering CCCP mathematical decomposition",
+      "prompt": "I'm struggling with the Concave-Convex Procedure (CCCP) in the paper. How do the authors decompose the non-convex Ramp loss into two convex hinge loss functions, and why is the first-order Taylor expansion surrogate strictly necessary for the solver?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Broke down the equation Rs(z) = H1(z) - Hs(z) and explained how replacing the concave portion with a linear Taylor expansion creates a globally convex surrogate that standard SVM solvers can handle.",
+      "student_verification": "Traced the CCCP iterative loop equations in the text and confirmed the substitution allows monotonic decrease of the objective.",
+      "confidence_level": 4
+    },
+    {
+      "interaction_id": 4,
+      "date": "2026-03-02",
+      "tool_name": "Claude",
+      "model": "Claude 4.6 Reasoning",
+      "purpose": "Differentiating algorithmic implementations",
+      "prompt": "What is the practical architectural difference between LASVM-NC and LASVM-I in the paper? Is LASVM-I simply an interventional filtering heuristic that mimics the CCCP outcome?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Clarified that LASVM-NC computes instantaneous gradients for the concave part, whereas LASVM-I is a faster heuristic that simply discards incoming instances if their margin is below the threshold.",
+      "student_verification": "Read the algorithmic pseudo-code for both frameworks in the paper to validate the procedural differences.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 5,
+      "date": "2026-03-02",
+      "tool_name": "Gemini",
+      "model": "Gemini 3.1 Pro",
+      "purpose": "Identifying critical failure modes",
+      "prompt": "What happens if the initialization is poor in this non-convex SVM? The paper mentions the risk of local minima. Does this mean a 'warm start' using a convex model on a clean subset is absolutely required to prevent the model from becoming blind to valid data?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Highlighted the 'initialization trap', revealing that without a warm start, legitimate clusters could fall below the 's' threshold and be permanently ignored due to zero gradients.",
+      "student_verification": "Correlated this failure mode with the properties of non-convex optimization spaces discussed in class lectures.",
+      "confidence_level": 4
+    },
+    {
+      "interaction_id": 6,
+      "date": "2026-03-02",
+      "tool_name": "Claude",
+      "model": "Claude 4.6 Reasoning",
+      "purpose": "Assessing hyperparameter fragility",
+      "prompt": "How sensitive is the model to the user-defined 's' parameter? What are the specific trade-offs or degradation behaviors if I set 's' too conservatively (close to 1) versus too aggressively (deeply negative)?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Structured the trade-offs: too high causes underfitting by discarding informative support vectors, while too low causes the model to degrade back into standard convex behavior, absorbing noise.",
+      "student_verification": "Drafted a hypothesis for testing different 's' values during the Part B experimentation phase.",
+      "confidence_level": 4
+    },
+    {
+      "interaction_id": 7,
+      "date": "2026-03-02",
+      "tool_name": "Gemini",
+      "model": "Gemini 3.1 Pro",
+      "purpose": "Planning CPU-bound reproduction for Part B",
+      "prompt": "For Part B, I am constrained to a standard CPU. Can I successfully simulate the LASVM-I interventional filtering heuristic by generating a noisy dataset and using scikit-learn's SGDClassifier inside a custom online loop with partial_fit?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Confirmed feasibility and provided a concrete architectural blueprint: initialize with warm_start=True, calculate margins manually in a loop, and conditionally execute partial_fit only if z >= s.",
+      "student_verification": "Checked the scikit-learn documentation for SGDClassifier and partial_fit to ensure the simulated loop aligns with the API constraints.",
+      "confidence_level": 5
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 5,
+      "prompt": "What happens if the initialization is poor in this non-convex SVM? The paper mentions the risk of local minima. Does this mean a 'warm start' using a convex model on a clean subset is absolutely required to prevent the model from becoming blind to valid data?",
+      "why_important": "Crucial for identifying the most significant structural failure mode (the initialization trap). It ensures I do not blindly apply the algorithm in Part B without establishing a reliable baseline hyperplane first."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 3,
+      "prompt": "I'm struggling with the Concave-Convex Procedure (CCCP) in the paper. How do the authors decompose the non-convex Ramp loss into two convex hinge loss functions, and why is the first-order Taylor expansion surrogate strictly necessary for the solver?",
+      "why_important": "This unlocked the core mathematical engine of the paper. Understanding how to bypass non-convexity using a localized linear surrogate is essential for defending the methodology in the proctored Part C."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 7,
+      "prompt": "For Part B, I am constrained to a standard CPU. Can I successfully simulate the LASVM-I interventional filtering heuristic by generating a noisy dataset and using scikit-learn's SGDClassifier inside a custom online loop with partial_fit?",
+      "why_important": "Directly addressed the strict compute feasibility constraint. It provided a clear, manageable engineering blueprint for reproduction without requiring complex C++ implementations."
+    },
+    {
+      "rank": 4,
+      "interaction_id": 6,
+      "prompt": "How sensitive is the model to the user-defined 's' parameter? What are the specific trade-offs or degradation behaviors if I set 's' too conservatively (close to 1) versus too aggressively (deeply negative)?",
+      "why_important": "Demonstrates analytical intent regarding hyperparameter fragility. It forms the basis of the experimental design I will conduct to evaluate the model's limitations."
+    },
+    {
+      "rank": 5,
+      "interaction_id": 2,
+      "prompt": "The Ertekin 2011 paper replaces standard Hinge loss with Ramp loss. How exactly does Ramp loss mathematically cap the penalty for severe outliers compared to the unbounded nature of Hinge loss, and why does this improve robustness?",
+      "why_important": "Established the foundational conceptual difference between the classical approach and the paper's novel contribution, which is vital for the overarching narrative of the assignment."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Part A.",
+    "understanding_acknowledged": true,
+    "signature": "Student Name",
+    "date": "2026-03-02"
+  }
+}

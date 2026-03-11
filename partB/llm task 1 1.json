@@ -1,0 +1,47 @@
+{
+  "student_metadata": {
+    "name": "Rishabh",
+    "roll_number": "230158",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-08"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-08",
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "purpose": "Drafting the step-by-step explanation of the paper",
+      "task_tag": "Task 1.1",
+      "prompt": "I need a precise step-by-step breakdown of 'Nonconvex Online Support Vector Machines' for a notebook answer. Can you map the method from input to output, point me to the relevant sections/equations, and suggest a compact structure I can rewrite in my own words?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped me organise the explanation around the actual paper pipeline and equation references before I rewrote it in my own wording.",
+      "student_verification": "Checked the final explanation against the paper sections and equation references before keeping it.",
+      "confidence_level": 4,
+      "code_used_verbatim": false
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "I need a precise step-by-step breakdown of 'Nonconvex Online Support Vector Machines' for a notebook answer. Can you map the method from input to output, point me to the relevant sections/equations, and suggest a compact structure I can rewrite in my own words?",
+      "why_important": "This prompt framed the task as guided paper reading and structuring, which is closer to how I actually used the assistant."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Task 1.1.",
+    "understanding_acknowledged": true,
+    "signature": "Rishabh",
+    "date": "2026-03-08"
+  }
+}

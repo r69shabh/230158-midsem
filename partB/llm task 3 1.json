@@ -1,0 +1,47 @@
+{
+  "student_metadata": {
+    "name": "Rishabh",
+    "roll_number": "230158",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-08"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-08",
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "purpose": "Designing the two ablations",
+      "task_tag": "Task 3.1",
+      "prompt": "Given my simplified LASVM-I code, can you suggest two ablations that are easy to implement from the same codebase: one that removes the left-side robustness filter and one that removes the right-side efficiency filter? A sketch of how to structure the comparison code and metrics table would help.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped me plan two code-level ablations from the same implementation and gave me a clearer structure for the comparison outputs.",
+      "student_verification": "Reran both ablations on the same seeds and checked that each interpretation matched the measured outputs.",
+      "confidence_level": 4,
+      "code_used_verbatim": false
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "Given my simplified LASVM-I code, can you suggest two ablations that are easy to implement from the same codebase: one that removes the left-side robustness filter and one that removes the right-side efficiency filter? A sketch of how to structure the comparison code and metrics table would help.",
+      "why_important": "This prompt shows targeted experimental-design help and some code scaffolding, not full delegation."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Task 3.1.",
+    "understanding_acknowledged": true,
+    "signature": "Rishabh",
+    "date": "2026-03-08"
+  }
+}

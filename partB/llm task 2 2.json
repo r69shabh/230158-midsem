@@ -1,0 +1,47 @@
+{
+  "student_metadata": {
+    "name": "Rishabh",
+    "roll_number": "230158",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-08"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-08",
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "purpose": "Implementing the simplified LASVM-I reproduction",
+      "task_tag": "Task 2.2",
+      "prompt": "Can you draft starter Python code for a simplified LASVM-I style learner: apply an RBF feature map, compute z = y * (w dot phi(x)), skip updates when z > 1 or z < s, and update only in the active interval with light regularization? Also note which paper step each code block is approximating.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped me with starter code for the filtered online update loop, which I modified, tested across seeds, and annotated against the paper.",
+      "student_verification": "Compared the final code path against Section 6 of the paper and reran the notebook until the outputs were consistent.",
+      "confidence_level": 4,
+      "code_used_verbatim": false
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "Can you draft starter Python code for a simplified LASVM-I style learner: apply an RBF feature map, compute z = y * (w dot phi(x)), skip updates when z > 1 or z < s, and update only in the active interval with light regularization? Also note which paper step each code block is approximating.",
+      "why_important": "This prompt makes it clear that code assistance was used, but only as a starting point for an implementation I still had to adapt and verify."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Task 2.2.",
+    "understanding_acknowledged": true,
+    "signature": "Rishabh",
+    "date": "2026-03-08"
+  }
+}

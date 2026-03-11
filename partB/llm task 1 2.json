@@ -1,0 +1,47 @@
+{
+  "student_metadata": {
+    "name": "Rishabh",
+    "roll_number": "230158",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-08"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-08",
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "purpose": "Identifying paper-specific assumptions",
+      "task_tag": "Task 1.2",
+      "prompt": "Can you identify three assumptions that are specific to the Ramp-loss / LASVM-I mechanism in this paper, explain why each assumption matters algorithmically, and point me to where each one is stated or implied in the paper?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped me isolate method-specific assumptions instead of drifting into generic ML assumptions.",
+      "student_verification": "Re-read the paper sections on Ramp loss and LASVM-I to make sure each assumption was traceable to the method.",
+      "confidence_level": 4,
+      "code_used_verbatim": false
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "Can you identify three assumptions that are specific to the Ramp-loss / LASVM-I mechanism in this paper, explain why each assumption matters algorithmically, and point me to where each one is stated or implied in the paper?",
+      "why_important": "This prompt is specific to the paper and sounds like assisted analysis rather than outsourcing the answer."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Task 1.2.",
+    "understanding_acknowledged": true,
+    "signature": "Rishabh",
+    "date": "2026-03-08"
+  }
+}

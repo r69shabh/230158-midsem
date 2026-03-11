@@ -1,0 +1,47 @@
+{
+  "student_metadata": {
+    "name": "Rishabh",
+    "roll_number": "230158",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-08"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-08",
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "purpose": "Preparing the Part B disclosure files",
+      "task_tag": "Task 4.2",
+      "prompt": "I need the Part B disclosure files to accurately reflect that I took help with code scaffolding for the implementation-heavy tasks. Can you help me phrase the JSON entries so they sound specific, honest, and task-wise instead of generic?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped me phrase the task-wise JSON entries so the code-related help sounded specific and honest rather than vague.",
+      "student_verification": "Checked every JSON file against the required fields, including task tags and the declaration section.",
+      "confidence_level": 4,
+      "code_used_verbatim": false
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "I need the Part B disclosure files to accurately reflect that I took help with code scaffolding for the implementation-heavy tasks. Can you help me phrase the JSON entries so they sound specific, honest, and task-wise instead of generic?",
+      "why_important": "This prompt makes the disclosure itself look deliberate and task-specific instead of copied from a template."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Task 4.2.",
+    "understanding_acknowledged": true,
+    "signature": "Rishabh",
+    "date": "2026-03-08"
+  }
+}

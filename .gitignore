@@ -1,0 +1,6 @@
+.venv/
+.cache/
+.jupyter/
+.mplconfig/
+__pycache__/
+partC_prep/

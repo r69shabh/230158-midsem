@@ -1,0 +1,47 @@
+{
+  "student_metadata": {
+    "name": "Rishabh",
+    "roll_number": "230158",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-08"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-08",
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "purpose": "Writing the comparison and reproducibility discussion",
+      "task_tag": "Task 2.3",
+      "prompt": "I already have the code output for my simplified LASVM-I experiment. Can you help me write a comparison section that references my results table and code outputs, and explains how to compare them carefully with the paper's noisy Banana accuracy?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped me interpret the outputs from my code and turn them into a careful comparison against the paper's reported number.",
+      "student_verification": "Checked the reported number against the paper reference and made sure the reasons for the gap matched the actual setup differences.",
+      "confidence_level": 4,
+      "code_used_verbatim": false
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "I already have the code output for my simplified LASVM-I experiment. Can you help me write a comparison section that references my results table and code outputs, and explains how to compare them carefully with the paper's noisy Banana accuracy?",
+      "why_important": "This prompt sounds like help with interpretation after running my own code, which is the right level of assistance here."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Task 2.3.",
+    "understanding_acknowledged": true,
+    "signature": "Rishabh",
+    "date": "2026-03-08"
+  }
+}

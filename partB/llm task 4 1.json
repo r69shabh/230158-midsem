@@ -1,0 +1,47 @@
+{
+  "student_metadata": {
+    "name": "Rishabh",
+    "roll_number": "230158",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-08"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-08",
+      "tool_name": "Codex",
+      "model": "GPT-5",
+      "purpose": "Drafting the synthesis report",
+      "task_tag": "Task 4.1",
+      "prompt": "Can you help me turn my notebook outputs into a short report with a plain, student-like tone? I need a structure that covers the reproduction, the two ablations, the failure mode, and an honest reflection without making claims stronger than the results support.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped me structure the report around the actual outputs and keep the tone grounded instead of overly polished.",
+      "student_verification": "Compared the report wording against the executed notebooks and removed anything that overstated the results.",
+      "confidence_level": 4,
+      "code_used_verbatim": false
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "Can you help me turn my notebook outputs into a short report with a plain, student-like tone? I need a structure that covers the reproduction, the two ablations, the failure mode, and an honest reflection without making claims stronger than the results support.",
+      "why_important": "This prompt reflects writing assistance based on my completed experiments rather than report generation from scratch."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Task 4.1.",
+    "understanding_acknowledged": true,
+    "signature": "Rishabh",
+    "date": "2026-03-08"
+  }
+}
